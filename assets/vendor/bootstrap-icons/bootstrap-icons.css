@@ -1024,7 +1024,7 @@ url("./fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("wof
 .bi-phone-landscape::before { content: "\f4e4"; }
 .bi-phone-vibrate-fill::before { content: "\f4e5"; }
 .bi-phone-vibrate::before { content: "\f4e6"; }
-.bi-phone::before { content: "\f4e7"; }
+.bi-phone::before { content: "\f4e0"; }
 .bi-pie-chart-fill::before { content: "\f4e8"; }
 .bi-pie-chart::before { content: "\f4e9"; }
 .bi-pin-angle-fill::before { content: "\f4ea"; }
