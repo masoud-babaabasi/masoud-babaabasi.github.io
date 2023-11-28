@@ -7,6 +7,6 @@ Template Name: iPortfolio
 
 [Template Page](https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/)
 
-[Author](BootstrapMade.com)
+[Author](https://BootstrapMade.com)
 
 [License](https://bootstrapmade.com/license/)
