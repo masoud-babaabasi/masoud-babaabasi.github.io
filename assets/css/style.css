@@ -915,6 +915,7 @@ section {
 .contact .info .address:hover i,
 .contact .info .phone:hover i,
 .contact .info .skype:hover i,
+.contact .info .linkedin:hover i,
 .contact .info .telegram:hover i {
   background: #149ddd;
   color: #fff;
