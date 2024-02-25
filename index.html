@@ -35,6 +35,22 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .skill {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .skill-level {
+    color: #ffc107; /* Yellow color for stars */
+    margin-right: 10px; /* Increased margin between stars */
+    font-size: 52px; /* Increased font size for stars */
+  }
+  .high { color: #28a745; } /* Green color for high skill level */
+  .medium { color: #ffc107; } /* Yellow color for medium skill level */
+  .low { color: #dc3545; } /* Red color for low skill level */
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0ZXKQE14"></script>
 <script>
@@ -213,64 +229,97 @@
 
           <div class="col-lg-6" data-aos="fade-up">
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">C/C++ <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            
+            <div class="progress">
+              <span class="skill">C/C++ </span>
+              <span class="skill-level" id="C/C++-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Matlab <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Matlab </span>
+              <span class="skill-level" id="Matlab-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Verilog <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Verilog </span>
+              <span class="skill-level" id="Verilog-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Python <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Python </span>
+              <span class="skill-level" id="Python-skill"></span>
             </div>
 
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Altium Designer <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Altium Designer </span>
+              <span class="skill-level" id="Altium-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Advanced Design System <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Advanced Design System  </span>
+              <span class="skill-level" id="ADS-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">Cadence Spectre <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">Cadence Spectre </span>
+              <span class="skill-level" id="Cadence-skill"></span>
             </div>
 
-            <div class="progress">
+            <!-- <div class="progress">
               <span class="skill">LaTex <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
+            </div> -->
+            <div class="progress">
+              <span class="skill">LaTex  </span>
+              <span class="skill-level" id="LaTex-skill"></span>
             </div>
 
           </div>
@@ -278,6 +327,34 @@
         </div>
 
       </div>
+      <script>
+        function generateStars(skillLevel, containerId) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      for (let i = 0; i < 5; i++) {
+        const star = document.createElement('span');
+        if (i < Math.floor(skillLevel)) {
+          star.textContent = '★'; // Full star
+        } else if (i < skillLevel) {
+          star.textContent = '★'; // Half star
+          star.style.opacity = '0.5'; // Make it semi-transparent
+        } else {
+          star.textContent = '☆'; // Empty star
+        }
+        container.appendChild(star);
+      }
+    }
+    
+        generateStars(4.5, 'C/C++-skill'); 
+        generateStars(3.5, 'Matlab-skill');
+        generateStars(2, 'Python-skill');
+        generateStars(3, 'Verilog-skill');
+
+        generateStars(4.5, 'Altium-skill'); 
+        generateStars(3, 'ADS-skill');
+        generateStars(3, 'Cadence-skill');
+        generateStars(2.5, 'LaTex-skill');
+      </script>
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
@@ -347,17 +424,14 @@
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
-            <!-- <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+            <div class="resume-item">
+              <h4>Full-Time Electronics and PCB Designer</h4>
+              <h5>2024 - Present</h5>
+              <p><em>CROUSE (P.J.S) Co, Tehran</em></p>
               <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li>Joined IC design team</li>
               </ul>
-            </div> -->
+            </div>
             <div class="resume-item">
               <h4>Part-Time Junior Embedded Engineer</h4>
               <h5>2018 - 2023</h5>
